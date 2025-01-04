@@ -3,19 +3,28 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #70E1E2; 
+  /* Light background */
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #0a0a0a; /* Dark mode background */
+    --foreground: #ededed; /* Dark mode text color */
   }
+}
+@font-face {
+  font-family: "Super Sedan";
+  src: url("/fonts/Super_Sedan.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  background: url("/bg.png") no-repeat center bottom; /* Background image */
+  background-size: cover; /* Make the image cover the entire screen */
+  color: var(--foreground); /* Use the defined foreground color */
+  font-family: "Super Sedan"; /* Ensure your custom font is applied */
+  font-display: swap;
+ /* Swap to custom font once it loads */
 }

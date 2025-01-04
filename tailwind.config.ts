@@ -8,9 +8,16 @@ export default {
   ],
   theme: {
     extend: {
+      clipPath: {
+        footerClipPath: "url(#footerClipPath)", // Existing clipPath
+        ClipPath: "url(#cloudClipPath)", // New clipPath
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+      },
+      fontFamily: {
+        sans: ["Super Sedan"],
       },
     },
   },

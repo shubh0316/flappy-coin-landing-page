@@ -1,0 +1,55 @@
+.container2 {
+  width: 101% !important;
+  height: 400px;
+  display: flex;
+  
+}
+
+.video-container {
+  width: 100%; /* Default width for laptop screens */
+  height: auto; /* Maintain aspect ratio */
+  position: relative;
+  overflow: hidden;
+  display: flex; /* Flexbox for centering content */
+  justify-content: center;
+  align-items: center;
+}
+
+.video-element {
+  width: 100%; /* Match the width of the container */
+  height: 100%; /* Match the height of the container */
+  object-fit: cover; /* Cover the container while maintaining aspect ratio */
+  clip-path: url(#cloudClipPath); /* Apply cloud shape mask */
+  -webkit-clip-path: url(#cloudClipPath); /* Safari support */
+  opacity: 1; /* Ensure full visibility */
+}
+
+.overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none;
+}
+
+.overlay-image {
+  width: 400px;
+  max-width: 100%;
+  height: auto;
+  pointer-events: none;
+}
+
+/* Styles for larger screens (1440px and above) */
+@media (min-width: 1440px) {
+  .video-container {
+    width: 190%;
+    height: 80vh;
+  }
+
+  .overlay-image {
+    width: 1200px;
+  }
+}
