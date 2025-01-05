@@ -2,7 +2,6 @@ import React from "react";
 import "./MiddleSection.css";
 import Image from "next/image";
 import VideoImage from "@/assets/videoImage.png";
-import Container2 from "./container2";
 
 const MiddleSection = () => {
   return (
