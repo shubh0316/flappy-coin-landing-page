@@ -4,7 +4,7 @@
 import React, { useRef, useState } from "react";
 import pipes from "@/assets/new.png";
 import Image from "next/image";
-import photo from "@/assets/phoneGroup.png";
+import photo from "@/assets/phoneGroup.svg";
 import Container from "./container";
 import gif5 from "@/assets/gifs/Coin.gif";
 import gif2 from "@/assets/gifs/Flappy Bird.gif";
@@ -12,8 +12,8 @@ import gif3 from "@/assets/gifs/Flappy Pepe.gif";
 import gif4 from "@/assets/gifs/Flappy Doge.gif";
 const ThirdSection = () => {
   const videoRef = useRef(null);
-  const [isMuted, setIsMuted] = useState(true); // Start with muted
-  const [soundLabel, setSoundLabel] = useState("Sound Off"); // Label for sound toggle
+  const [isMuted, setIsMuted] = useState(true); 
+  const [soundLabel, setSoundLabel] = useState("Sound Off"); 
 
   const handlePlayPause = () => {
     const video = videoRef.current;
@@ -67,12 +67,18 @@ const ThirdSection = () => {
           <Image src={gif5} alt="coins" width={60} className="absolute top-[650px] left-[720px]" />
           <Image src={gif5} alt="coins" width={60} className="absolute top-[640px] left-[760px]" />
           <Image src={gif3} alt="coins" width={90} className="absolute top-[640px] left-[1040px]" />
-          <Image src={gif5} alt="coins" width={60} className="absolute top-[1280px] left-[760px]" />
+          <Image src={gif5} alt="coins" width={60} className="absolute top-[1275px] left-[760px]" />
           <Image src={gif5} alt="coins" width={60} className="absolute top-[1280px] left-[800px]" />
-          <Image src={gif5} alt="coins" width={60} className="absolute top-[1280px] left-[840px]" />
-          <Image src={gif5} alt="coins" width={60} className="absolute top-[1320px] left-[460px]" />
+          <Image src={gif5} alt="coins" width={60} className="absolute top-[1275px] left-[840px]" />
+          <Image src={gif5} alt="coins" width={60} className="absolute top-[1312px] left-[460px]" />
           <Image src={gif5} alt="coins" width={60} className="absolute top-[1320px] left-[500px]" />
-          <Image src={gif5} alt="coins" width={60} className="absolute top-[1320px] left-[540px]" />
+          <Image src={gif5} alt="coins" width={60} className="absolute top-[1312px] left-[540px]" />
+          <Image src={gif5} alt="coins" width={60} className="absolute top-[1312px] left-[160px]" />
+          <Image src={gif5} alt="coins" width={60} className="absolute top-[1320px] left-[200px]" />
+          <Image src={gif5} alt="coins" width={60} className="absolute top-[1312px] left-[240px]" />
+          <Image src={gif5} alt="coins" width={60} className="absolute top-[1312px] left-[980px]" />
+          <Image src={gif5} alt="coins" width={60} className="absolute top-[1320px] left-[1020px]" />
+          <Image src={gif5} alt="coins" width={60} className="absolute top-[1312px] left-[1060px]" />
           </div>
           <div className="w-full flex justify-center">
             <div className="relative w-full max-w-2xl p-2 rounded-2xl shadow-6xl">

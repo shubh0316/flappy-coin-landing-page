@@ -1,7 +1,7 @@
 import React from "react";
 import "./MiddleSection.css";
 import Image from "next/image";
-import VideoImage from "@/assets/videoImage.png";
+import VideoImage from "@/assets/Frame.svg";
 
 const MiddleSection = () => {
   return (
