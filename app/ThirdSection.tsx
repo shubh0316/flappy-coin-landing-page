@@ -41,7 +41,7 @@ const ThirdSection = () => {
     <>
       <Container>
         <div className="relative">
-        <div className="absolute -z-10 right-8  lg:top-[300px] sm:top-[800px] sm:right-0 sm:left-0 sm:mx-auto">
+        <div className="absolute -z-10 right-8  lg:top-[270px] sm:top-[800px] sm:right-0 sm:left-0 sm:mx-auto">
             <Image src={pipes} alt="Background Pipes" className="mx-auto" />
           </div>
 
