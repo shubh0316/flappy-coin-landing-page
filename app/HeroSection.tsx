@@ -1,3 +1,4 @@
+"use client"
 import FlappyButton from "./components/button";
 import twitter from "@/assets/twitter.png";
 import game from "@/assets/game.png";
@@ -13,10 +14,28 @@ import gif2 from "@/assets/gifs/Flappy Bird.gif";
 import gif3 from "@/assets/gifs/Flappy Pepe.gif";
 import gif4 from "@/assets/gifs/Flappy Doge.gif";
 import gif5 from "@/assets/gifs/Coin.gif";
+import ecllipse from "@/assets/mobileAssets/ellipse.png";
+import logoMobile from "@/assets/mobileAssets/logo.png";
+import useMedia from 'use-media';
+import mobilePipe from "@/assets/mobileAssets/pipe.svg";
+const MobileView = () => {
+  return (
+    <>
+      Background Ellipse
+        {/* <div className="flex flex-col justify-around items-center space-y-">  
+      <Image src={logoMobile} alt="Logo" className=" mt-14 w-[300px]" />
+      <p className="text-lg text-center px-4 text-[#E9FCD9] text-shadow-lg">
+  &apos;Flappy Bird&apos; to return after a 10-year hiatus: the true story behind
+  the world&apos;s most viral mobile game.</p>
+
+  </div> */}
+  </>
+  
+  );
+}
 
 
-
-const HeroSection = () => {
+const DesktopView  = () => {
   return (
     <>
       <Container>
@@ -59,8 +78,6 @@ const HeroSection = () => {
   <br />
   the world&apos;s most viral mobile game.
 </p>
-
-
             </div>
           </div>
         </div>
@@ -69,6 +86,15 @@ const HeroSection = () => {
   );
 };
 
+const HeroSection = () => {
+  const isMobileView = useMedia({ maxWidth: 767 });
 
+  return (
+    <>
+               {isMobileView ? <MobileView /> : <DesktopView />}
+    </>
+  )
+
+}
 
 export default HeroSection;

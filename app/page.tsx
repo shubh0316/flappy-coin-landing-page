@@ -6,7 +6,7 @@ import Footer from "./footer";
 export default function Home() {
   return (
    <>
-   <div className="overflow-hidden">
+   <div className="">
    <HeroSection />
    <MiddleSection />
    <ThirdSection />
