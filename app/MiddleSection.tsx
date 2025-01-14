@@ -5,8 +5,8 @@ import Image from "next/image";
 import VideoImage from "@/assets/Frame.svg";
 import useMedia from "use-media";
 import gif3 from "@/assets/gifs/Flappy Pepe.gif";
-import gif4 from "@/assets/gifs/Flappy Doge.gif";
-import gif5 from "@/assets/gifs/Coin.gif";
+// import gif4 from "@/assets/gifs/Flappy Doge.gif";
+// import gif5 from "@/assets/gifs/Coin.gif";
 const MobileView = () => {
   return (
    <>
