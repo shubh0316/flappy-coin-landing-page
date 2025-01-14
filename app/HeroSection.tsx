@@ -14,11 +14,11 @@ import gif2 from "@/assets/gifs/Flappy Bird.gif";
 import gif3 from "@/assets/gifs/Flappy Pepe.gif";
 import gif4 from "@/assets/gifs/Flappy Doge.gif";
 import gif5 from "@/assets/gifs/Coin.gif";
-import ecllipse from "@/assets/mobileAssets/ellipse.png";
-import logoMobile from "@/assets/mobileAssets/logo.png";
+// import ecllipse from "@/assets/mobileAssets/ellipse.png";
+// import logoMobile from "@/assets/mobileAssets/logo.png";
 import useMedia from 'use-media';
 import buttonMain from "@/assets/mobileAssets/button.png";
-import mobilePipe from "@/assets/mobileAssets/pipe.svg";
+// import mobilePipe from "@/assets/mobileAssets/pipe.svg";
 const MobileView = () => {
   return (
     <>
