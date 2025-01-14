@@ -1,9 +1,29 @@
+"use client"
 import React from "react";
 import "./MiddleSection.css";
 import Image from "next/image";
 import VideoImage from "@/assets/Frame.svg";
+import useMedia from "use-media";
+import gif3 from "@/assets/gifs/Flappy Pepe.gif";
+import gif4 from "@/assets/gifs/Flappy Doge.gif";
+import gif5 from "@/assets/gifs/Coin.gif";
+const MobileView = () => {
+  return (
+   <>
+    <div className="relative">
+    <Image src={gif3} alt="GIF 3" width={100} className="absolute top-[900px] left-[260px]" />
 
-const MiddleSection = () => {
+    <Image src={gif3} alt="GIF 3" width={100} className="absolute top-[1000px] left-[130px]" />
+    <Image src={gif3} alt="GIF 3" width={100} className="absolute top-[1100px] left-[260px]" />
+
+    </div>
+   </>
+  );
+}
+
+
+
+const DesktopView = () => {
   return (
     <>
       <div className="items-center absolute  top-[800px] w-full h-[35vh] object-cover lg:h-full">
@@ -21,7 +41,7 @@ const MiddleSection = () => {
           <div className="video-container relative right-0">
             <video autoPlay loop muted className="video-element">
               <source
-                src="/loop.mp4"
+                src="/loop2.mp4"
                 type="video/mp4"
               />
               Your browser does not support the video tag.
@@ -41,4 +61,14 @@ const MiddleSection = () => {
   );
 };
 
+const MiddleSection = () => {
+  const isMobileView = useMedia({ maxWidth: 767 });
+
+  return (
+    <>
+               {isMobileView ? <MobileView /> : <DesktopView />}
+    </>
+  )
+
+}
 export default MiddleSection;

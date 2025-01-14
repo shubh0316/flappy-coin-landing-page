@@ -15,21 +15,32 @@ import gif3 from "@/assets/gifs/Flappy Pepe.gif";
 import gif4 from "@/assets/gifs/Flappy Doge.gif";
 import gif5 from "@/assets/gifs/Coin.gif";
 // import ecllipse from "@/assets/mobileAssets/ellipse.png";
-// import logoMobile from "@/assets/mobileAssets/logo.png";
+import logoMobile from "@/assets/mobileAssets/logo.png";
 import useMedia from 'use-media';
 import buttonMain from "@/assets/mobileAssets/button.png";
 // import mobilePipe from "@/assets/mobileAssets/pipe.svg";
 const MobileView = () => {
   return (
     <>
-      Background Ellipse
-        {/* <div className="flex flex-col justify-around items-center space-y-">  
-      <Image src={logoMobile} alt="Logo" className=" mt-14 w-[300px]" />
-      <p className="text-lg text-center px-4 text-[#E9FCD9] text-shadow-lg">
+        <div className="flex flex-col justify-around items-center space-y-">  
+      <Image src={logoMobile} alt="Logo" className=" mt-12 w-[300px]" />
+      <p className="text-xl text-center  px-10 mt-4 text-[#E9FCD9] text-shadow-xl text-stroke" style={{ WebkitTextStrokeColor: '#000000' }}>
   &apos;Flappy Bird&apos; to return after a 10-year hiatus: the true story behind
   the world&apos;s most viral mobile game.</p>
-
-  </div> */}
+  <Image src={buttonMain} alt="" className="mt-8 w-[180px]" />
+  <Image src={gif3} alt="GIF 2" width={200} className="" />
+  <div className="flex gap-4 ">
+           
+              <FlappyRoundedButton content="twitter" imageSrc={twitter} />
+              <FlappyRoundedButton content="game" imageSrc={game} />
+            </div>
+            <div className="flex  flex-col gap-4 mt-10">
+           
+            <FlappyButton content="buy flappycoin" />
+            <FlappyButton content="play flappycoin" />
+         </div>
+         <Image src={button} alt="" width={300} className="mt-10 z-10" />
+  </div>
   </>
   
   );
