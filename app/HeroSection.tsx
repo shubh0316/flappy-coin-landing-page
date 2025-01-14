@@ -35,7 +35,7 @@ const MobileView = () => {
   );
 }
 
-
+//url left
 const DesktopView  = () => {
   return (
     <>
