@@ -17,6 +17,7 @@ import gif5 from "@/assets/gifs/Coin.gif";
 import ecllipse from "@/assets/mobileAssets/ellipse.png";
 import logoMobile from "@/assets/mobileAssets/logo.png";
 import useMedia from 'use-media';
+import buttonMain from "@/assets/mobileAssets/button.png";
 import mobilePipe from "@/assets/mobileAssets/pipe.svg";
 const MobileView = () => {
   return (
@@ -71,13 +72,18 @@ const DesktopView  = () => {
                 </div>
               </div>
               <Image src={button} alt="" width={300} className="absolute top-1/2 lg:mt-0 md:mt-14 z-10" />
-              <p className="absolute top-[440px] text-lg text-center px-4 text-[#E9FCD9] text-shadow-lg">
+              <p className="absolute top-[440px] text-lg text-center px-4 text-[#E9FCD9] text-shadow-xl text-stroke" style={{ WebkitTextStrokeColor: '#000000' }}>
   &apos;Flappy Bird&apos; to return after a 10-
   <br />
   year hiatus: the true story behind
   <br />
   the world&apos;s most viral mobile game.
 </p>
+<Image src={buttonMain} alt="" className="absolute top-[560px] w-[180px]" />
+
+
+
+
             </div>
           </div>
         </div>

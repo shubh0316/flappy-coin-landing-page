@@ -2,12 +2,12 @@ import { StaticImageData } from "next/image";
 import React from "react";
 import Image from "next/image";
 
-type FlappyRoundedButtonProps = {
+type MainButtonProps = {
   content: string;
   imageSrc: StaticImageData; 
 };
 
-const FlappyRoundedButton = ({ content, imageSrc }: FlappyRoundedButtonProps) => {
+const MainButton = ({ content, imageSrc }: MainButtonProps) => {
   return (
     <div
       className="bg-[#FFEB3B] border-[4px]  border-bold border-black rounded-full shadow-lg 
@@ -21,4 +21,4 @@ const FlappyRoundedButton = ({ content, imageSrc }: FlappyRoundedButtonProps) =>
   );
 };
 
-export default FlappyRoundedButton;
+export default MainButton;

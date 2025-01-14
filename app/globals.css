@@ -22,7 +22,6 @@
 body {
   background: url("/bg.png") no-repeat center bottom; /* Default background image */
   background-size: cover; /* Stretch to cover the area */
-  background-attachment: fixed; /* Fixed background */
   color: var(--foreground); /* Use the defined foreground color */
   font-family: "Super Sedan", sans-serif; /* Fallback to a standard font */
   font-display: swap; /* Swap to custom font once it loads */

@@ -21,9 +21,30 @@ const config: Config = {
       fontFamily: {
         sans: ["Super Sedan", "sans-serif"], // Added fallback font
       },
+      textStroke: {
+        sm: "1px", // Small stroke
+        DEFAULT: "1px", // Default stroke
+        lg: "3px", // Large stroke
+      },
     },
   },
-  plugins: [textShadowPlugin], // Adding the text shadow plugin
+  plugins: [
+    textShadowPlugin, // Adding the text shadow plugin
+    function ({ addUtilities, theme }) {
+      const strokeUtilities = {
+        ".text-stroke-sm": {
+          WebkitTextStroke: theme("textStroke.sm"),
+        },
+        ".text-stroke": {
+          WebkitTextStroke: theme("textStroke.DEFAULT"),
+        },
+        ".text-stroke-lg": {
+          WebkitTextStroke: theme("textStroke.lg"),
+        },
+      };
+      addUtilities(strokeUtilities, ["responsive"]);
+    },
+  ],
 };
 
 export default config;
