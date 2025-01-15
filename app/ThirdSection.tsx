@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/ban-ts-comment */
 //@ts-nocheck
 "use client";
-import React, { useRef, useState } from "react";
+import React, { useRef, useState,useEffect } from "react";
 import pipes from "@/assets/new.png";
 import Image from "next/image";
 import photo from "@/assets/phoneGroup.svg";
@@ -23,6 +23,7 @@ const MobileView = () => {
   const videoRef = useRef(null); // Reference for video element
 
   const images = [phone1, phone2, phone3, phone4]; // Array of image sources
+
   // Function to set the active image by clicking a dot
   const setActiveImage = (index: number) => {
     setCurrentIndex(index);
@@ -52,6 +53,16 @@ const MobileView = () => {
     }
   };
 
+  // Automatically change image every 3 seconds
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length); // Loop through images
+    }, 1000); // Change every 3 seconds
+
+    // Clear the interval on component unmount
+    return () => clearInterval(interval);
+  }, [images.length]);
+
   return (
     <>
       <div className="carousel-container flex flex-col items-center justify-around">
@@ -65,9 +76,6 @@ const MobileView = () => {
             className=""
           />
         </div>
-
-        {/* Navigation buttons */}
-     
 
         {/* Dots navigation */}
         <div className=" flex space-x-2">
@@ -83,34 +91,128 @@ const MobileView = () => {
             />
           ))}
         </div>
-
       </div>
-      <div className=""></div>
-      <div className="mt-40 w-full flex justify-center">
-  <div className="relative w-full max-w-2xl p-2 rounded-2xl shadow-6xl">
-    <video
-      ref={videoRef}
-      className="w-full h-auto rounded-2xl object-cover"
-      loop
-      autoPlay
-      muted={isMuted}
-      onClick={handlePlayPause}
-    >
-      <source src="/vedio2.mp4" type="video/mp4" />
-      Your browser does not support the video tag.
-    </video>
 
-    <div
-      className="absolute top-4 right-4 p-2 bg-[#FFEB3B] text-black rounded-full shadow-xl cursor-pointer"
-      onClick={toggleMute}
-    >
-      <span className="font-semibold">{soundLabel}</span>
-    </div>
-  </div>
-</div>
+      <div className="mt-40 w-full flex justify-center">
+        <div className="relative w-full max-w-2xl p-2 rounded-2xl shadow-6xl">
+          <video
+            ref={videoRef}
+            className="w-full h-auto rounded-2xl object-cover"
+            loop
+            autoPlay
+            muted={isMuted}
+            onClick={handlePlayPause}
+          >
+            <source src="/vedio2.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+
+          <div
+            className="absolute top-4 right-4 p-2 bg-[#FFEB3B] text-black rounded-full shadow-xl cursor-pointer"
+            onClick={toggleMute}
+          >
+            <span className="font-semibold">{soundLabel}</span>
+          </div>
+        </div>
+      </div>
     </>
   );
 };
+// const MobileView = () => {
+//   const [currentIndex, setCurrentIndex] = useState(0); // Tracks the active image index
+//   const [isMuted, setIsMuted] = useState(true); // Mute state
+//   const [soundLabel, setSoundLabel] = useState("Sound Off"); // Sound toggle label
+//   const videoRef = useRef(null); // Reference for video element
+
+//   const images = [phone1, phone2, phone3, phone4]; // Array of image sources
+//   // Function to set the active image by clicking a dot
+//   const setActiveImage = (index: number) => {
+//     setCurrentIndex(index);
+//   };
+
+//   // Play/pause video function
+//   const handlePlayPause = () => {
+//     const video = videoRef.current;
+//     if (video.paused) {
+//       video.play().catch((err) => console.log("Play failed:", err));
+//     } else {
+//       video.pause();
+//     }
+//   };
+
+//   // Mute/unmute video function
+//   const toggleMute = () => {
+//     const video = videoRef.current;
+//     if (isMuted) {
+//       setIsMuted(false);
+//       setSoundLabel("Sound On");
+//       video.muted = false;
+//     } else {
+//       setIsMuted(true);
+//       setSoundLabel("Sound Off");
+//       video.muted = true;
+//     }
+//   };
+
+//   return (
+//     <>
+//       <div className="carousel-container flex flex-col items-center justify-around">
+//         {/* Image */}
+//         <div className="image-container">
+//           <Image
+//             src={images[currentIndex]}
+//             alt={`Phone ${currentIndex + 1}`}
+//             width={400}
+//             height={400}
+//             className=""
+//           />
+//         </div>
+
+//         {/* Navigation buttons */}
+     
+
+//         {/* Dots navigation */}
+//         <div className=" flex space-x-2">
+//           {images.map((_, index) => (
+//             <button
+//               key={index}
+//               onClick={() => setActiveImage(index)}
+//               className={`w-4 h-4 rounded-full border-2 ${
+//                 currentIndex === index
+//                   ? "bg-black border-black"
+//                   : "bg-transparent border-black"
+//               }`}
+//             />
+//           ))}
+//         </div>
+
+//       </div>
+//       <div className=""></div>
+//       <div className="mt-40 w-full flex justify-center">
+//   <div className="relative w-full max-w-2xl p-2 rounded-2xl shadow-6xl">
+//     <video
+//       ref={videoRef}
+//       className="w-full h-auto rounded-2xl object-cover"
+//       loop
+//       autoPlay
+//       muted={isMuted}
+//       onClick={handlePlayPause}
+//     >
+//       <source src="/vedio2.mp4" type="video/mp4" />
+//       Your browser does not support the video tag.
+//     </video>
+
+//     <div
+//       className="absolute top-4 right-4 p-2 bg-[#FFEB3B] text-black rounded-full shadow-xl cursor-pointer"
+//       onClick={toggleMute}
+//     >
+//       <span className="font-semibold">{soundLabel}</span>
+//     </div>
+//   </div>
+// </div>
+//     </>
+//   );
+// };
 
 const DesktopView = () => {
   const videoRef = useRef(null);

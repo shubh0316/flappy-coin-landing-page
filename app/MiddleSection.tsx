@@ -129,8 +129,6 @@ const MobileView = () => {
   );
 };
 
-// const MobileView = () => {
-//   return (
 //     <>
 //     <div className="relative">
 //       <Image src={gif3} alt="GIF 3" width={100} className="absolute top-[900px] left-[260px]" />
