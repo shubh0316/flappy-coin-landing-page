@@ -7,7 +7,6 @@ import Container from "./container";
 import useMedia from "use-media";
 import logoMobile from "@/assets/mobileAssets/logo.png";
 import button from "@/assets/buttonIcons.png";
-import footer from "@/assets/mobileAssets/footer.png";
 const MobileView = () => {
     return (
         <> 

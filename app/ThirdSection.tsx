@@ -23,17 +23,6 @@ const MobileView = () => {
   const videoRef = useRef(null); // Reference for video element
 
   const images = [phone1, phone2, phone3, phone4]; // Array of image sources
-
-  // Function to go to the next image
-  const nextImage = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-  };
-
-  // Function to go to the previous image
-  const prevImage = () => {
-    setCurrentIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length);
-  };
-
   // Function to set the active image by clicking a dot
   const setActiveImage = (index: number) => {
     setCurrentIndex(index);
