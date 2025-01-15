@@ -33,6 +33,7 @@ const MobileView = () => {
           width={130}
           className="absolute top-[1200px] left-[260px]"
         />
+        <div className="p-4"> 
           <Image
           src={gif5}
           alt="GIF 3"
@@ -51,7 +52,7 @@ const MobileView = () => {
           width={100}
           className="absolute top-[1900px] left-[110px]"
         />
-       
+       </div>
         {/* SVG with video inside for mobile view */}
         <div className="mobile-video-container relative">
           <svg
