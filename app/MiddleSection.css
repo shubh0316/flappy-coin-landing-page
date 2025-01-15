@@ -53,3 +53,32 @@
     width: 1200px;
   }
 }
+.mobile-video-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* Ensures any overflow is hidden */
+}
+
+.mobile-video {
+  width: 100%; /* Adjust to fill the SVG container */
+  height: 100%; /* Adjust to fill the SVG container */
+  object-fit: cover; /* Ensure the video covers the available space */
+  clip-path: url(#mobileClipPath); /* Applies the masking */
+  -webkit-clip-path: url(#mobileClipPath); /* Safari compatibility */
+}
+.mobile-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400%; /* Adjust to fill the SVG container */
+  height: 100%; 
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none;
+}

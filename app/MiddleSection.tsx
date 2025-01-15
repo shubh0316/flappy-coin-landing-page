@@ -5,23 +5,151 @@ import Image from "next/image";
 import VideoImage from "@/assets/Frame.svg";
 import useMedia from "use-media";
 import gif3 from "@/assets/gifs/Flappy Pepe.gif";
-// import gif4 from "@/assets/gifs/Flappy Doge.gif";
-// import gif5 from "@/assets/gifs/Coin.gif";
+import gif1 from "@/assets/gifs/FartCoin.gif";
+import gif2 from "@/assets/gifs/Flappy Bird.gif";
+import gif4 from "@/assets/gifs/Flappy Doge.gif";
+import gif5 from "@/assets/gifs/Coin.gif";
+import mobileOverlay from "@/assets/mobileAssets/mobile.png";
+import pipe1 from "@/assets/mobileAssets/pipe1.svg";
 const MobileView = () => {
   return (
-   <>
-    <div className="relative">
-    <Image src={gif3} alt="GIF 3" width={100} className="absolute top-[900px] left-[260px]" />
+    <>
+      <div className="relative">
+        <Image
+          src={gif2}
+          alt="GIF 3"
+          width={150}
+          className="absolute top-[940px] left-[260px]"
+        />
+        <Image
+          src={gif3}
+          alt="GIF 3"
+          width={130}
+          className="absolute top-[1050px] left-[130px]"
+        />
+        <Image
+          src={gif4}
+          alt="GIF 3"
+          width={130}
+          className="absolute top-[1200px] left-[260px]"
+        />
+          <Image
+          src={gif5}
+          alt="GIF 3"
+          width={100}
+          className="absolute top-[1900px] left-[210px]"
+        />
+          <Image
+          src={gif5}
+          alt="GIF 3"
+          width={100}
+          className="absolute top-[1920px] left-[160px]"
+        />
+          <Image
+          src={gif5}
+          alt="GIF 3"
+          width={100}
+          className="absolute top-[1900px] left-[110px]"
+        />
+       
+        {/* SVG with video inside for mobile view */}
+        <div className="mobile-video-container relative">
+          <svg
+            width="428"
+            height="1281"
+            viewBox="0 0 428 1281"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <defs>
+              <clipPath id="clip0_2024_295">
+                <path
+                  d="M254.656 72.5869C302.145 -12.5504 492.755 -26.0687 552.823 83.301C627.595 42.0747 758.256 63.5991 806.914 153.236C831.78 199.041 873.658 278.736 831.78 410.339C831.78 410.339 918.154 445.801 905.067 612.771C891.98 779.74 731.658 818.793 731.658 818.793C731.658 818.793 606.935 1127.8 309.606 916.787C197.115 1027.69 50.5935 976.843 -24.9999 916.787L-24.9999 590.37L-25 170.623C-25 170.623 26.3698 -32.8285 254.656 72.5869Z"
+                  fill="#FF2D84"
+                />
+              </clipPath>
+            </defs>
+            <foreignObject
+              x="0"
+              y="0"
+              width="428"
+              height="1281"
+              clipPath="url(#clip0_2024_295)"
+            >
+              <video autoPlay loop muted className="mobile-video">
+                <source src="/loop2.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+            </foreignObject>
+          </svg>
+          {/* Overlay Image */}
+          <div className="mobile-overlay">
+            <Image
+              src={mobileOverlay}
+              alt="Overlay Image"
+              className="overlay-image"
+              width={800}
+            />
+          </div>
 
-    <Image src={gif3} alt="GIF 3" width={100} className="absolute top-[1000px] left-[130px]" />
-    <Image src={gif3} alt="GIF 3" width={100} className="absolute top-[1100px] left-[260px]" />
-
-    </div>
-   </>
+        </div>
+        <Image
+          src={pipe1}
+          alt="GIF 3"
+          width={68}
+          className="absolute -z-10 top-[900px] left-[40px]"
+        />
+         <div className="absolute inset-0 flex items-center justify-center z-10">
+                  <Image src={gif2} alt="GIF 2" width={100} className="absolute top-[2380px] left-[20px]" />
+                  <Image src={gif1} alt="GIF 3" width={100} className="absolute top-[2320px] left-[80px]" />
+                  <Image src={gif3} alt="GIF 4" width={80} className="absolute top-[2390px] left-[200px]" />
+                  <Image src={gif4} alt="GIF 5" width={80} className="absolute top-[2320px] left-[300px]" />
+                  {/* <Image src={gif5} alt="GIF 5" width={60} className="absolute top-[2320px] left-[280px]" />
+                  <Image src={gif5} alt="GIF 5" width={60} className="absolute top-[2320px] left-[220px]" />
+                  <Image src={gif5} alt="GIF 5" width={60} className="absolute top-[2320px] left-[260px]" /> */}
+                </div>
+      </div>
+    </>
   );
-}
+};
 
+// const MobileView = () => {
+//   return (
+//     <>
+//     <div className="relative">
+//       <Image src={gif3} alt="GIF 3" width={100} className="absolute top-[900px] left-[260px]" />
+//       <Image src={gif3} alt="GIF 3" width={100} className="absolute top-[1000px] left-[130px]" />
+//       <Image src={gif3} alt="GIF 3" width={100} className="absolute top-[1100px] left-[260px]" />
 
+//       {/* SVG with video inside for mobile view */}
+//       <div className="mobile-video-container">
+//         <svg
+//           width="428"
+//           height="1281"
+//           viewBox="0 0 428 1281"
+//           fill="none"
+//           xmlns="http://www.w3.org/2000/svg"
+//         >
+//           <defs>
+//             <clipPath id="clip0_2024_295">
+//               <path
+//                 d="M254.656 72.5869C302.145 -12.5504 492.755 -26.0687 552.823 83.301C627.595 42.0747 758.256 63.5991 806.914 153.236C831.78 199.041 873.658 278.736 831.78 410.339C831.78 410.339 918.154 445.801 905.067 612.771C891.98 779.74 731.658 818.793 731.658 818.793C731.658 818.793 606.935 1127.8 309.606 916.787C197.115 1027.69 50.5935 976.843 -24.9999 916.787L-24.9999 590.37L-25 170.623C-25 170.623 26.3698 -32.8285 254.656 72.5869Z"
+//                 fill="#FF2D84"
+//               />
+//             </clipPath>
+//           </defs>
+//           <foreignObject x="0" y="0" width="428" height="1281" clipPath="url(#clip0_2024_295)">
+//             <video autoPlay loop muted className="mobile-video">
+//               <source src="/loop2.mp4" type="video/mp4" />
+//               Your browser does not support the video tag.
+//             </video>
+//           </foreignObject>
+//         </svg>
+//       </div>
+//     </div>
+//   </>
+//   );
+// };
 
 const DesktopView = () => {
   return (
@@ -66,9 +194,8 @@ const MiddleSection = () => {
 
   return (
     <>
-               {isMobileView ? <MobileView /> : <DesktopView />}
+      {isMobileView ? <MobileView /> : <DesktopView />}
     </>
-  )
-
-}
+  );
+};
 export default MiddleSection;

@@ -33,9 +33,9 @@ body {
 
 @media (max-width: 768px) {
   body {
-    background: url("/bg-mobile.png") no-repeat center top; /* Mobile-specific background */
+    background: url("/bg-3.png") no-repeat center top; /* Mobile-specific background */
     background-size: cover; /* Stretch to cover the area */
-    background-attachment: scroll; /* Avoid issues with fixed attachment on mobile */
+    background-position: center top bottom; /* Position background at the bottom */
   }
 }
 
