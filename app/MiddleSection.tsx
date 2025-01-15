@@ -100,6 +100,20 @@ const MobileView = () => {
           className="absolute -z-10 top-[900px] left-[40px]"
         />
          <div className="absolute inset-0 flex items-center justify-center z-10">
+                  <Image src={gif2} alt="GIF 2" width={70} className="absolute -top-[770px] left-[5px]" />
+                  <Image src={gif1} alt="GIF 3" width={70} className="absolute -top-[840px] left-[60px]" />
+                  <Image src={gif3} alt="GIF 4" width={50} className="absolute -top-[840px] left-[180px]" />
+                  <Image src={gif4} alt="GIF 5" width={50} className="absolute -top-[840px] left-[270px]" />
+                  <Image src={gif5} alt="GIF 5" width={45} className="absolute -top-[817px] left-[320px]" />
+                  <Image src={gif5} alt="GIF 5" width={45} className="absolute -top-[810px] left-[340px]" />
+                  <Image src={gif5} alt="GIF 5" width={45} className="absolute -top-[817px] left-[360px]" />
+
+
+                  {/* <Image src={gif5} alt="GIF 5" width={60} className="absolute top-[2320px] left-[280px]" />
+                  <Image src={gif5} alt="GIF 5" width={60} className="absolute top-[2320px] left-[220px]" />
+                  <Image src={gif5} alt="GIF 5" width={60} className="absolute top-[2320px] left-[260px]" /> */}
+                </div>
+         <div className="absolute inset-0 flex items-center justify-center z-10">
                   <Image src={gif2} alt="GIF 2" width={100} className="absolute top-[2380px] left-[20px]" />
                   <Image src={gif1} alt="GIF 3" width={100} className="absolute top-[2320px] left-[80px]" />
                   <Image src={gif3} alt="GIF 4" width={80} className="absolute top-[2390px] left-[200px]" />
