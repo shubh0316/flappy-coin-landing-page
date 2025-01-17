@@ -62,8 +62,8 @@
   justify-content: center;
   align-items: center;
   overflow: hidden; /* Ensures any overflow is hidden */
-  -webkit-clip-path: url(#mobileClipPath); /* Safari compatibility */
-  clip-path: url(#mobileClipPath); /* Applies the masking */
+  -webkit-clip-path: url(#cloudClipPath); /* Safari compatibility */
+  clip-path: url(#cloudClipPath); /* Applies the masking */
 }
 
 .mobile-video {
