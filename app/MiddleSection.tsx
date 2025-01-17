@@ -11,6 +11,7 @@ import gif4 from "@/assets/gifs/Flappy Doge.gif";
 import gif5 from "@/assets/gifs/Coin.gif";
 import mobileOverlay from "@/assets/mobileAssets/mobile.png";
 import pipe1 from "@/assets/mobileAssets/pipe1.svg";
+//vedio-settled
 const MobileView = () => {
   return (
     <>
