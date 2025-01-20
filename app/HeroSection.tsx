@@ -17,6 +17,7 @@ import gif5 from "@/assets/gifs/Coin.gif";
 import logoMobile from "@/assets/mobileAssets/logo.png";
 import useMedia from 'use-media';
 import buttonMain from "@/assets/mobileAssets/button.png";
+import Link from "next/link";
 // import mobilePipe from "@/assets/mobileAssets/pipe.svg";
 const MobileView = () => {
   return (
@@ -26,7 +27,10 @@ const MobileView = () => {
       <p className="text-xl text-center  px-10 mt-4 text-[#E9FCD9] text-shadow-xl text-stroke" style={{ WebkitTextStrokeColor: '#000000' }}>
   &apos;Flappy Bird&apos; to return after a 10-year hiatus: the true story behind
   the world&apos;s most viral mobile game.</p>
+  <Link href="https://news.temple.edu/news/2024-09-20/flappy-bird-return-after-10-year-hiatus-true-story-behind-world-s-most-viral-mobile#:~:text=The%20game%20was%20removed%20from,thousands%20of%20dollars%20on%20eBay." target="_blank" rel="noopener noreferrer">
   <Image src={buttonMain} alt="" className="mt-8 w-[180px]" />
+  </Link>
+
   <Image src={gif3} alt="GIF 2" width={200} className="" />
   <div className="flex gap-4 ">
            
@@ -91,14 +95,14 @@ const DesktopView  = () => {
 </p>
 
 
-<a href="https://labour-connect.com" target="_blank" rel="noopener noreferrer">
+<Link href="https://news.temple.edu/news/2024-09-20/flappy-bird-return-after-10-year-hiatus-true-story-behind-world-s-most-viral-mobile#:~:text=The%20game%20was%20removed%20from,thousands%20of%20dollars%20on%20eBay." target="_blank" rel="noopener noreferrer">
   <Image
     src={buttonMain}
     alt="Button"
     width={300}
     className="absolute top-[630px] left-[260px] w-[180px] cursor-pointer z-10"
   />
-</a>
+</Link>
 
 
 
