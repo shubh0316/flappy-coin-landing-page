@@ -32,7 +32,6 @@ const MobileView = () => {
   <div className="flex gap-4 ">
            
               <FlappyRoundedButton content="twitter" imageSrc={twitter} />
-              <FlappyRoundedButton content="game" imageSrc={game} />
             </div>
             <div className="flex  flex-col gap-4 mt-10">
            
@@ -56,16 +55,17 @@ const DesktopView  = () => {
             <div className="absolute top-0 w-full">
               <Image src={top} alt="Top pipes" className="w-full" />
             </div>
-            <div className="mt-10 w-full">
-              <Image src={bottom} alt="Bottom pipes" className="w-full" />
-            </div>
+            <div className="md:absolute md:top-[460px] md:mt-0  md:block lg:relative lg:mt-10  lg:top-[340px] lg:block xl:relative xl:top-auto xl:mt-10">
+  <Image src={bottom} alt="Bottom pipes" className="" />
+</div>
+
+
           </div>
           <div className="relative z-10 flex flex-col items-center h-full">
             <div className="flex gap-4 mt-10">
               <FlappyButton content="buy flappycoin" />
               <FlappyButton content="play flappycoin" />
               <FlappyRoundedButton content="twitter" imageSrc={twitter} />
-              <FlappyRoundedButton content="game" imageSrc={game} />
             </div>
             <div className="relative flex flex-col items-center space-y-20">
               {/* Logo with GIFs around it */}

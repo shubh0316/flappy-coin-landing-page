@@ -1,12 +1,13 @@
+/* General Container Styles */
 .container2 {
   width: 101% !important;
   height: 400px;
   display: flex;
-  
 }
 
+/* Video Container Styles */
 .video-container {
-  width: 100%; /* Default width for laptop screens */
+  width: 100%; /* Default width for laptop and mobile screens */
   height: auto; /* Maintain aspect ratio */
   position: relative;
   overflow: hidden;
@@ -21,7 +22,6 @@
   width: 100%; /* Match the width of the container */
   height: 100%; /* Match the height of the container */
   object-fit: cover; /* Cover the container while maintaining aspect ratio */
-
   opacity: 1; /* Ensure full visibility */
 }
 
@@ -43,7 +43,7 @@
   pointer-events: none;
 }
 
-/* Styles for larger screens (1440px and above) */
+/* Laptop and larger screens (1440px and above) */
 @media (min-width: 1440px) {
   .video-container {
     width: 190%;
@@ -54,32 +54,53 @@
     width: 1200px;
   }
 }
-.mobile-video-container {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden; /* Ensures any overflow is hidden */
-  -webkit-clip-path: url(#cloudClipPath); /* Safari compatibility */
-  clip-path: url(#cloudClipPath); /* Applies the masking */
+
+/* Tablet view (768px to 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .container2 {
+    margin-top: 140px; /* Push the container down a little */
+  }
+  
+  .video-container {
+    width: 100%;
+    height: 60vh; /* Adjust the height of the video container */
+  }
+
+  .overlay-image {
+    width: 800px; /* Adjust the width of the overlay image */
+  }
 }
 
-.mobile-video {
-  width: 100%; /* Adjust to fill the SVG container */
-  height: 100%; /* Adjust to fill the SVG container */
-  object-fit: cover; /* Ensure the video covers the available space */
-}
-.mobile-overlay {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 400%; /* Adjust to fill the SVG container */
-  height: 100%; 
-  transform: translate(-50%, -50%);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  pointer-events: none;
+/* Mobile view (under 768px) */
+@media (max-width: 767px) {
+  .mobile-video-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Ensures any overflow is hidden */
+    -webkit-clip-path: url(#cloudClipPath); /* Safari compatibility */
+    clip-path: url(#cloudClipPath); /* Applies the masking */
+  }
+
+  .mobile-video {
+    width: 100%; /* Adjust to fill the SVG container */
+    height: 100%; /* Adjust to fill the SVG container */
+    object-fit: cover; /* Ensure the video covers the available space */
+  }
+
+  .mobile-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 400%; /* Adjust to fill the SVG container */
+    height: 100%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
+  }
 }

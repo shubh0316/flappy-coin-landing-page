@@ -247,7 +247,7 @@ const DesktopView = () => {
     <>
       <Container>
         <div className="relative">
-          <div className="absolute -z-10 right-8 lg:top-[270px] sm:top-[800px] sm:right-0 sm:left-0 sm:mx-auto">
+          <div className="absolute -z-10 right-8 md:top-[200px] lg:top-[270px] sm:top-[800px] sm:right-0 sm:left-0 sm:mx-auto">
             <Image src={pipes} alt="Background Pipes" className="mx-auto" />
           </div>
 
