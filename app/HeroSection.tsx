@@ -89,8 +89,16 @@ const DesktopView  = () => {
   <br />
   the world&apos;s most viral mobile game.
 </p>
-<Image src={buttonMain} alt="" className="absolute top-[560px] w-[180px]" />
 
+
+<a href="https://labour-connect.com" target="_blank" rel="noopener noreferrer">
+  <Image
+    src={buttonMain}
+    alt="Button"
+    width={300}
+    className="absolute top-[630px] left-[260px] w-[180px] cursor-pointer z-10"
+  />
+</a>
 
 
 
