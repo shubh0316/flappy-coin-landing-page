@@ -1,7 +1,6 @@
 "use client"
 import FlappyButton from "./components/button";
 import twitter from "@/assets/twitter.png";
-import game from "@/assets/game.png";
 import FlappyRoundedButton from "./components/RoundButton";
 import Image from "next/image";
 import top from "@/assets/top.png";
